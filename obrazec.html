@@ -5,15 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style2.css">
-    <title>Ticek Hub</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+
+    <title>UEFA Champions League Ticket Shop</title>
 </head>
 
 <body>
-    <form>
+    <form method="get">
         <div id="glavni">
             <div class="sedezi">
+                <div class="seat"><input type="checkbox" id="seat1"><label for="seat1"></label></div>
+                <div class="seat"><input type="checkbox" id="seat2"><label for="seat2"></label></div>
+                <div class="seat"><input type="checkbox" id="seat3" disabled><label for="seat3"></label></div>
+                <div class="seat"><input type="checkbox" id="seat4"><label for="seat4"></label></div>
+                <div class="seat"><input type="checkbox" id="seat5"><label for="seat5"></label></div>
+                <div class="seat"><input type="checkbox" id="seat6"><label for="seat6"></label></div>
+                <div class="seat"><input type="checkbox" id="seat7"><label for="seat7"></label></div>
+                <div class="seat"><input type="checkbox" id="seat8" disabled><label for="seat8"></label></div>
+                <div class="seat"><input type="checkbox" id="seat9"><label for="seat9"></label></div>
+                <div class="seat"><input type="checkbox" id="seat10"><label for="seat10"></label></div>
+                <div class="seat"><input type="checkbox" id="seat11"><label for="seat11"></label></div>
+                <div class="seat"><input type="checkbox" id="seat12"><label for="seat12"></label></div>
+                <div class="seat"><input type="checkbox" id="seat13"><label for="seat13"></label></div>
+                <div class="seat"><input type="checkbox" id="seat14"><label for="seat14"></label></div>
+                <div class="seat"><input type="checkbox" id="seat15"><label for="seat15"></label></div>
+                <div class="seat"><input type="checkbox" id="seat16"><label for="seat16"></label></div>
+                <div class="seat"><input type="checkbox" id="seat17" disabled><label for="seat17"></label></div>
+                <div class="seat"><input type="checkbox" id="seat18"><label for="seat18"></label></div>
+                <div class="seat"><input type="checkbox" id="seat19"><label for="seat19"></label></div>
+                <div class="seat"><input type="checkbox" id="seat20"><label for="seat20"></label></div>
+                <div class="seat"><input type="checkbox" id="seat21" disabled><label for="seat21"></label></div>
+                <div class="seat"><input type="checkbox" id="seat22"><label for="seat22"></label></div>
+                <div class="seat"><input type="checkbox" id="seat23"><label for="seat23"></label></div>
+                <div class="seat"><input type="checkbox" id="seat24"><label for="seat24"></label></div>
+                <div class="seat"><input type="checkbox" id="seat25"><label for="seat25"></label></div>
+                <div class="seat"><input type="checkbox" id="seat26"><label for="seat26"></label></div>
+                <div class="seat"><input type="checkbox" id="seat27"><label for="seat27"></label></div>
+                <div class="seat"><input type="checkbox" id="seat28"><label for="seat28"></label></div>
+                <div class="seat"><input type="checkbox" id="seat29" disabled><label for="seat29"></label></div>
+                <div class="seat"><input type="checkbox" id="seat30"><label for="seat30"></label></div>
 
+                <!-- Legend for seats -->
+                <div class="legend">
+                    <div class="legend-item">
+                        <span class="available"></span> Available
+                    </div>
+                    <div class="legend-item">
+                        <span class="selected"></span> Selected
+                    </div>
+                    <div class="legend-item">
+                        <span class="unavailable"></span> Unavailable
+                    </div>
+                </div>
             </div>
+
             <div class="forma">
                 <div id="bar">
                     <div id="logo"><img src="Slike/UEFA_Champions_League.png"></div>
@@ -25,8 +76,8 @@
                             <div>PRIIMEK:</div>
                         </div>
                         <div class="container3">
-                            <div><input type="text"></div>
-                            <div><input type="text"></div>
+                            <div><input type="text" required></div>
+                            <div><input type="text" required></div>
                         </div>
                     </div>
                     <div class="container">
@@ -34,7 +85,7 @@
                             <div>E-POŠTA:</div>
                         </div>
                         <div class="container3">
-                            <div><input type="email"></div>
+                            <div><input type="email" required></div>
                         </div>
                     </div>
                     <div class="container">
@@ -42,7 +93,7 @@
                             <div>TELEFON:</div>
                         </div>
                         <div class="container3">
-                            <div><input type="tel" placeholder="000-000-000"></div>
+                            <div><input type="tel" placeholder="000-000-000" required></div>
                         </div>
                     </div>
                     <div class="container">
@@ -50,7 +101,7 @@
                             <div>NASLOV:</div>
                         </div>
                         <div class="container3">
-                            <div><input type="text" id="mesto"></div>
+                            <div><input type="text" id="mesto" required></div>
                         </div>
                     </div>
                     <div class="container">
@@ -59,8 +110,8 @@
                             <div>POŠTA:</div>
                         </div>
                         <div class="container3">
-                            <div><input type="text"></div>
-                            <div><input type="text"></div>
+                            <div><input type="text" required></div>
+                            <div><input type="text" required></div>
                         </div>
                     </div>
                     <div class="container">
@@ -69,7 +120,7 @@
                         </div>
                         <div class="container3">
                             <div>
-                                <select>
+                                <select required>
                                     <option value="Afghanistan">Afghanistan</option>
                                     <option value="Albania">Albania</option>
                                     <option value="Algeria">Algeria</option>
@@ -220,7 +271,8 @@
                                     <option value="Rwanda">Rwanda</option>
                                     <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
                                     <option value="Saint Lucia">Saint Lucia</option>
-                                    <option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines
+                                    <option value="Saint Vincent and the Grenadines">Saint Vincent and the
+                                        Grenadines
                                     </option>
                                     <option value="Samoa">Samoa</option>
                                     <option value="San Marino">San Marino</option>
@@ -279,7 +331,7 @@
                         </div>
                         <div class="container3">
                             <div>
-                                <select>
+                                <select required>
                                     <option>VIP</option>
                                     <option>Stojišče</option>
                                     <option>Sedež</option>
@@ -287,12 +339,52 @@
                             </div>
                         </div>
                     </div>
-                    <input type="submit" value="KUPI">
+                    <input type="submit" value="KUPI" id="submitBtn">
                 </div>
             </div>
         </div>
-        <script src="phone.js"></script>
     </form>
+
+    <script>
+        document.getElementById('submitBtn').addEventListener('click', function (event) {
+            // Prevent form submission initially
+            event.preventDefault();
+
+            // Check if all required fields are filled
+            const inputs = document.querySelectorAll('input[required], select[required]');
+            let allFilled = true;
+
+            inputs.forEach(input => {
+                if (!input.value) {
+                    allFilled = false;
+                    input.classList.add('error'); // Optional: add a class to highlight the empty fields
+                } else {
+                    input.classList.remove('error'); // Remove error class if filled
+                }
+            });
+
+            if (allFilled) {
+                // Show success alert
+                Swal.fire({
+                    title: 'Vaše naročilo je bilo oddano',
+                    icon: 'success',
+                    confirmButtonText: 'Ok'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // Submit the form if confirmed
+                        document.forms[0].submit(); // Submit the form
+                    }
+                });
+            } else {
+                // Show error alert
+                Swal.fire({
+                    title: 'Prosimo, izpolnite vsa obvezna polja.',
+                    icon: 'error',
+                    confirmButtonText: 'Ok'
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
