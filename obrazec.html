@@ -51,7 +51,7 @@
                 <div class="seat"><input type="checkbox" id="seat29" disabled><label for="seat29"></label></div>
                 <div class="seat"><input type="checkbox" id="seat30"><label for="seat30"></label></div>
 
-                
+
                 <div class="legend">
                     <div class="legend-item">
                         <div class="available"></div> Available
@@ -344,47 +344,8 @@
             </div>
         </div>
     </form>
+    <script src="index.js"></script>
 
-    <script>
-        document.getElementById('submitBtn').addEventListener('click', function (event) {
-            // Prevent form submission initially
-            event.preventDefault();
-
-            // Check if all required fields are filled
-            const inputs = document.querySelectorAll('input[required], select[required]');
-            let allFilled = true;
-
-            inputs.forEach(input => {
-                if (!input.value) {
-                    allFilled = false;
-                    input.classList.add('error'); // Optional: add a class to highlight the empty fields
-                } else {
-                    input.classList.remove('error'); // Remove error class if filled
-                }
-            });
-
-            if (allFilled) {
-                // Show success alert
-                Swal.fire({
-                    title: 'Vaše naročilo je bilo oddano',
-                    icon: 'success',
-                    confirmButtonText: 'Ok'
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        // Submit the form if confirmed
-                        document.forms[0].submit(); // Submit the form
-                    }
-                });
-            } else {
-                // Show error alert
-                Swal.fire({
-                    title: 'Prosimo, izpolnite vsa obvezna polja.',
-                    icon: 'error',
-                    confirmButtonText: 'Ok'
-                });
-            }
-        });
-    </script>
 </body>
 
 </html>
