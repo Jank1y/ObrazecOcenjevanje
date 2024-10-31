@@ -104,3 +104,8 @@ body {
     font-family: Font2;
     src: url(Fonts/LEMONMILK-Bold.otf);
 }
+
+.tekma:hover {
+    transform: scale(0.9);
+    transition: 0.5s;
+}
