@@ -330,12 +330,15 @@
                             <div>VRSTA KARTE:</div>
                         </div>
                         <div class="container3">
-                            <div>
-                                <select required>
-                                    <option>VIP</option>
-                                    <option>Stojišče</option>
-                                    <option>Sedež</option>
-                                </select>
+                            <div class="vstopnice">
+                                <input type="radio" id="vip" name="ticket-type" value="VIP" required>
+                                <label for="vip">VIP</label>
+
+                                <input type="radio" id="standing" name="ticket-type" value="Stojišče">
+                                <label for="standing">Stojišče</label>
+
+                                <input type="radio" id="seat" name="ticket-type" value="Sedež">
+                                <label for="seat">Sedež</label>
                             </div>
                         </div>
                     </div>

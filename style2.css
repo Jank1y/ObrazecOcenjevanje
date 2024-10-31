@@ -218,5 +218,17 @@ select {
 #submitBtn:hover {
     background-color: #4160c5;
     transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+    box-shadow: 0 5px 15px rgba(65, 96, 197, 0.4);
+}
+
+.vstopnice{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.vstopnice label {
+    margin-right: 20px;
 }
