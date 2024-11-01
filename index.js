@@ -58,19 +58,19 @@ document.getElementById('submitBtn').addEventListener('click', function (event) 
             input.classList.remove('error'); // Remove error class if filled
         }
     });
-
-    if (allFilled) {
-        // Show success alert if all fields are valid
-        Swal.fire({
-            title: 'Vaše naročilo je bilo oddano',
-            icon: 'success',
-            confirmButtonText: 'Ok'
-        }).then((result) => {
-            if (result.isConfirmed) {
-                // Submit the form if confirmed
-                document.forms[0].submit(); // Submit the form
-            }
-        });
+      if (allFilled) {
+          // Show success alert if all fields are valid
+          Swal.fire({
+              title: 'Vaše naročilo je bilo oddano',
+              icon: 'success',
+              confirmButtonText: 'Ok'
+          }).then((result) => {
+              if (result.isConfirmed) {
+                  // Redirect to index.html after form submission
+                  document.forms[0].submit();
+                  window.location.href = 'index.html';
+              }
+          });
     } else {
         // Show error alert if not all fields are filled or valid
         Swal.fire({
