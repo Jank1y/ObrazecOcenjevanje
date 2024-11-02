@@ -34,6 +34,8 @@ body {
     box-shadow: 10px 10px black;
     width: 450px;
     height: 300px;
+    scale: 1.0;
+    transition: 0.5s;
 }
 
 .bel {
